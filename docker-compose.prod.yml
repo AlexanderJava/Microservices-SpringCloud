@@ -62,14 +62,14 @@ services:
       - local-network
 
   naming-server:
-    image: amjunior93/naming-server:0.0.1-SNAPSHOT
+    image: amjunior93/naming-server:latest
     ports:
       - 8761:8761
     networks:
       - local-network
 
   api-gateway:
-    image: amjunior93/api-gateway:0.0.1-SNAPSHOT
+    image: amjunior93/api-gateway:latest
     ports:
       - 8765:8765
     depends_on:
@@ -85,11 +85,8 @@ services:
       - local-network
 
   cambio-service:
-    image: amjunior93/cambio-service
+    image: amjunior93/cambio-service:latest
     restart: always
-    build:
-      context: .
-      dockerfile: cambio-service/Dockerfile
     environment:
       TZ: America/Sao_Paulo
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
@@ -113,11 +110,8 @@ services:
       - local-network
       
   book-service:
-    image: amjunior93/book-service
+    image: amjunior93/book-service:latest
     restart: always
-    build:
-      context: .
-      dockerfile: book-service/Dockerfile
     environment:
       TZ: America/Sao_Paulo
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka

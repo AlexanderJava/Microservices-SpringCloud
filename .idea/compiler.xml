@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
-        <module name="erudio-config-server" />
+        <module name="config-server" />
         <module name="greeting-service" />
         <module name="book-service" />
         <module name="naming-server" />
@@ -18,7 +18,7 @@
       <module name="api-gateway" target="17" />
       <module name="book-service" target="17" />
       <module name="cambio-service" target="17" />
-      <module name="erudio-config-server" target="17" />
+      <module name="config-server" target="17" />
       <module name="greeting-service" target="17" />
       <module name="naming-server" target="17" />
     </bytecodeTargetLevel>
@@ -28,7 +28,7 @@
       <module name="api-gateway" options="-parameters" />
       <module name="book-service" options="-parameters" />
       <module name="cambio-service" options="-parameters" />
-      <module name="erudio-config-server" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="greeting-service" options="-parameters" />
       <module name="naming-server" options="-parameters" />
     </option>
